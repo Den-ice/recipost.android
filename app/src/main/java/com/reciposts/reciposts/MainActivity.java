@@ -1,4 +1,4 @@
-package com.example.reciposts_webviewapp;
+package com.reciposts.reciposts;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,28 +9,26 @@ import android.webkit.WebViewClient;
 
 public class MainActivity extends AppCompatActivity {
 
-    private WebView webView;
+    public WebView mywebview;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        mywebview = (WebView)findViewById(R.id.webview);
+        WebSettings websettings = mywebview.getSettings();
+        websettings.setJavaScriptEnabled(true);
+        mywebview.loadUrl("https://s3-us-west-1.amazonaws.com/reciposts.com/index.html");
 
-        webView = findViewById(R.id.webView);
-        webView.setWebViewClient(new WebViewClient());//loads website to app
-        webView.loadUrl("https://reciposts.com/");
-
-        WebSettings webSettings = webView.getSettings();
-        webSettings.setJavaScriptEnabled(true);
+        mywebview.setWebViewClient(new WebViewClient());
     }
-    //method requires to use back button to go to previous webpage
+
     @Override
     public void onBackPressed() {
-        if(webView.canGoBack()) {
-            webView.goBack();
-        }else{
+        if (mywebview.canGoBack()){
+            mywebview.goBack();
+        } else {
             super.onBackPressed();
         }
-
     }
 }

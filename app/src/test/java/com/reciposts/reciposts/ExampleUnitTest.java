@@ -1,4 +1,4 @@
-package com.example.reciposts_webviewapp;
+package com.reciposts.reciposts;
 
 import org.junit.Test;
 

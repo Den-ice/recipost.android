@@ -1,12 +1,11 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 29
-    buildToolsVersion "29.0.2"
+    compileSdkVersion 28
     defaultConfig {
-        applicationId "com.example.reciposts_webviewapp"
-        minSdkVersion 22
-        targetSdkVersion 29
+        applicationId "com.reciposts.reciposts"
+        minSdkVersion 18
+        targetSdkVersion 28
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"

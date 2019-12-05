@@ -1,4 +1,4 @@
-package com.example.reciposts_webviewapp;
+package com.reciposts.reciposts;
 
 import android.content.Context;
 
@@ -22,6 +22,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
 
-        assertEquals("com.example.reciposts_webviewapp", appContext.getPackageName());
+        assertEquals("com.reciposts.reciposts", appContext.getPackageName());
     }
 }
